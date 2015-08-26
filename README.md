@@ -37,12 +37,12 @@ These methods are **virtual attributes**, meaning that they are accessor methods
 ### Adding a password_digest attribute
 When generating the model we want to authenticate, we have to add a `password_digest` attribute. This will become the field in our database that will store the hashed password. That's the whole point of this, not storing passwords in plain text in our DB.
 
-	**Important:** The field has to be type text, and named exactly `password_digest`.
+ > **Important:** The field has to be type **text**, and named exactly `password_digest`.
 
 ### Making these methods accessible
 Once the `bcrypt` gem has been installed, we want to use it in our models. For that, `ActiveModel::SecurePassword` includes a class method called `has_secure_password`, so we just have to call it at the top of our model and we're good.
 
-	By the way, `ActiveRecord` automatically includes `ActiveModel::SecurePassword`, that's why we can call `has_secure_password` in our models.
+> By the way, `ActiveRecord` automatically includes `ActiveModel::SecurePassword`, that's why we can call `has_secure_password` in our models.
 
 Once we have called this method, we will have available the convenient methods we were talking about before. Some validations will also be added automatically:
 
