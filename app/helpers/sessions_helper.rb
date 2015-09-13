@@ -25,4 +25,8 @@ module SessionsHelper
     session.delete(:user_id)
     @current_user = nil
   end
+
+  def authorize
+    redirect_to '/not_in_the_list' unless current_user
+  end
 end

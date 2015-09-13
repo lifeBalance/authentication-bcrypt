@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
 
   include SessionsHelper
-  def authorize
-    redirect_to '/not_in_the_list' unless current_user
-  end
+  # def authorize
+  #   redirect_to '/not_in_the_list' unless current_user
+  # end
 end
