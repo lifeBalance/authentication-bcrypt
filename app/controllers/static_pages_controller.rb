@@ -1,5 +1,5 @@
 class StaticPagesController < ApplicationController
-  # before_action :authorize, :only => :welcome
+  before_action :authorize, :only => :welcome
 
   def home
   end

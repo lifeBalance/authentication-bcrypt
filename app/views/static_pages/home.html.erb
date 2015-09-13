@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <h1>Hello sir, do you want to come in?</h1>
-  <div class="btn-group" role="group">
-    <button class="btn btn-warning btn-lg" href="/" role="button">Nope</button>
-    <button class="btn btn-success btn-lg" href="/welcome" role="button">Yes</button>
-  </div>
+  <p><%= image_tag 'heck-yes.jpg', class: 'center-block img-rounded' %></p>
+  <p class="text-center">
+    <%= link_to "Yes", welcome_path, class: 'btn btn-primary' %>
+  </p>
 </div>

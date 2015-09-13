@@ -14,7 +14,7 @@ class UsersController < ApplicationController
       log_in(@user)
       redirect_to root_path
     else
-      render '/signup'
+      render 'new'
     end
   end
 

@@ -1,4 +1,10 @@
 <div class="jumbotron">
   <h1>Sorry sir, but you're not in the list.</h1>
-  <%= image_tag('bouncer.jpg', :alt => 'Bouncer', :class => 'center-block') %>
+  <p><%= image_tag('bouncer.jpg', :alt => 'Bouncer', :class => 'center-block  img-rounded') %></p>
+  <div class="text-center">
+    <div class="btn-group">
+      <%= link_to "Log in", login_path, class: 'btn btn-success navbar-btn' %>
+      <%= link_to "Signup", signup_path, class: 'btn btn-primary navbar-btn' %>
+    </div>
+  </div>
 </div>

@@ -1,17 +1,21 @@
 <nav class="navbar navbar-default">
   <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="/">
-        <%= image_tag("the-narrator.png", size: "30x30", alt: "The narrator") %>
-      </a>
-    </div>
-    <ul class="nav navbar-nav navbar-right">
-      <% if logged_in? %>
-        <li><%= link_to "Log out", logout_path, method: "delete" %></li>
-      <% else %>
-        <li><%= link_to "Log in", login_path %></li>
-        <li><%= link_to "Signup", signup_path %></li>
-      <% end %>
-    </ul>
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">
+          <%= image_tag("the-narrator.png", size: "30x30", alt: "The narrator") %>
+        </a>
+      </div>
+      
+      <div class="navbar-right">
+        <% if logged_in? %>
+          <%= link_to "Log out", logout_path, method: "delete", class: 'btn btn-warning navbar-btn' %>
+          <p class="navbar-text">Signed in as <%= current_user.name.capitalize %></p>
+        <% else %>
+          <%= link_to "Log in", login_path, class: 'btn btn-success navbar-btn' %>
+          <%= link_to "Signup", signup_path, class: 'btn btn-primary navbar-btn' %>
+        <% end %>
+      </div>
+    </div><!-- .container -->
   </div><!-- .container-fluid -->
 </nav>

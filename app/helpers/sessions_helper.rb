@@ -1,4 +1,5 @@
 module SessionsHelper
+
   def log_in(user)
     session[:user_id] = user.id
     # Temporary cookies created using the session method are automatically encrypted
