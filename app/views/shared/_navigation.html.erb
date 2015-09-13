@@ -6,14 +6,14 @@
           <%= image_tag("the-narrator.png", size: "30x30", alt: "The narrator") %>
         </a>
       </div>
-      
+
       <div class="navbar-right">
         <% if logged_in? %>
           <%= link_to "Log out", logout_path, method: "delete", class: 'btn btn-warning navbar-btn' %>
           <p class="navbar-text">Signed in as <%= current_user.name.capitalize %></p>
         <% else %>
           <%= link_to "Log in", login_path, class: 'btn btn-success navbar-btn' %>
-          <%= link_to "Signup", signup_path, class: 'btn btn-primary navbar-btn' %>
+          <%= link_to "Signup", new_user_path, class: 'btn btn-primary navbar-btn' %>
         <% end %>
       </div>
     </div><!-- .container -->

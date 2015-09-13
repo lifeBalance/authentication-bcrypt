@@ -6,10 +6,8 @@ Rails.application.routes.draw do
   post   'login',  :to => 'sessions#create'
   delete 'logout', :to => 'sessions#destroy'
 
-  # Named routes for signing up users
-  get     'signup',  :to => 'users#new'
-  post    'users',   :to => 'users#create'
-  delete  'users',   :to => 'users#destroy'
+  # Named route for signing up users
+  resources :users, path_names: { new: 'signup' }, except: [:edit, :update]
 
   # More routes for our static pages
   get 'static_pages/home'

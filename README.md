@@ -1,10 +1,10 @@
 ## Introduction to authentication in Rails 4
-First of all, there are a lot of ways to implement authentication in Rails 4 ([devise], [omniauth], [authlogic]), but using the `bcrypt.gem` is one of the easiest way to do it.
+First of all, there are a lot of ways to implement authentication in Rails 4 ([devise][1], [omniauth][2], [authlogic][3]), but using the `bcrypt.gem` is one of the easiest way to do it.
 
 ## What is bcrypt
-`bcrypt` is a program(to be more precise, is a [key derivation function]) for hashing passwords designed by Niels Provos and David Mazières, and presented in 1999. This function is based on the Blowfish cipher, you can read more about it [here]. The bcrypt function is the default password hash algorithm for BSD and other systems including some Linux distributions such as SUSE Linux.
+`bcrypt` is a program(to be more precise, is a [key derivation function][4]) for hashing passwords designed by Niels Provos and David Mazières, and presented in 1999. This function is based on the Blowfish cipher, you can read more about it [here][5]. The bcrypt function is the default password hash algorithm for BSD and other systems including some Linux distributions such as SUSE Linux.
 
-There are implementations of bcrypt for a lot of languages Python, C, C#, Perl, PHP, Java, JavaScript, and of course Ruby. We owe the ruby implementation to [Coda Hale], and the project is maintained here at [github]. Also you can check the gem at [rubygems].
+There are implementations of bcrypt for a lot of languages Python, C, C#, Perl, PHP, Java, JavaScript, and of course Ruby. We owe the ruby implementation to [Coda Hale][6], and the project is maintained here at [github][7]. Also you can check the gem at [rubygems][8].
 
 ## Using bcrypt in Rails
 
@@ -58,19 +58,19 @@ That pretty much covers it, hopefully we have shred some light over the dark mag
 I've also added some style via [Bootstrap](http://getbootstrap.com/) to make it all look more spiffy, and added some silly images. Sometimes a good story and a graphic interface may help understanding concepts.
 
 For this writeup I checked the following links:
-* [ActiveModel::SecurePassword]
-* [ActiveModel::SecurePassword::ClassMethods]
-* [ActiveModel::SecurePassword::InstanceMethodsOnActivation]
+* [ActiveModel::SecurePassword][9]
+* [ActiveModel::SecurePassword::ClassMethods][10]
+* [ActiveModel::SecurePassword::InstanceMethodsOnActivation][11]
 
 ---
-[key derivation function]:(https://en.wikipedia.org/wiki/Key_derivation_function)
-[devise]:(https://github.com/plataformatec/devise)
-[omniauth]:(https://github.com/intridea/omniauth)
-[authlogic]:(https://github.com/binarylogic/authlogic)
-[here]:(https://en.wikipedia.org/wiki/Bcrypt)
-[Coda Hale]:(http://codahale.com/)
-[github]:(https://github.com/codahale/bcrypt-ruby)
-[rubygems]:(https://rubygems.org/gems/bcrypt/versions/3.1.10)
-[ActiveModel::SecurePassword]:(http://api.rubyonrails.org/classes/ActiveModel/SecurePassword.html)
-[ActiveModel::SecurePassword::ClassMethods]:(http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html)
-[ActiveModel::SecurePassword::InstanceMethodsOnActivation]:(http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/InstanceMethodsOnActivation.html)
+[1]:https://github.com/plataformatec/devise
+[2]:(https://github.com/intridea/omniauth)
+[3]:(https://github.com/binarylogic/authlogic)
+[4]:(https://en.wikipedia.org/wiki/Key_derivation_function)
+[5]:(https://en.wikipedia.org/wiki/Bcrypt)
+[6]:(http://codahale.com/)
+[7]:(https://github.com/codahale/bcrypt-ruby)
+[8]:(https://rubygems.org/gems/bcrypt/versions/3.1.10)
+[9]:(http://api.rubyonrails.org/classes/ActiveModel/SecurePassword.html)
+[10]:(http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html)
+[11]:(http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/InstanceMethodsOnActivation.html)

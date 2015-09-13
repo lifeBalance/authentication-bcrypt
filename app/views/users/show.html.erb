@@ -1,7 +1,19 @@
-<%= @user.name %>, <%= @user.email %>
-<h1>
+<h1 class="text-center"><%= @user.name.capitalize %>'s profile</h1>
   <%# I've created function for generating a "robotar" image
       of every user, based on her hashed email  %>
-  <%= robotar_for @user %>
-  <%= @user.name %>
-</h1>
+
+<div class="row">
+  <div class="col-sm-6 col-sm-offset-3">
+    <div class="media">
+      <div class="media-left">
+        <%= robotar_for @user %>
+      </div>
+      <div class="media-body media-bottom">
+        <h3 class="media-heading"><%= @user.name %></h3>
+        <p><%= @user.email %></p>
+        <p><%= link_to "Delete User", user_path, method: :delete,
+        data: { confirm: "Are you sure?" },class: 'btn btn-danger'%></p>
+      </div>
+    </div>
+  </div>
+</div>
