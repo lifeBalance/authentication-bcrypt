@@ -1,0 +1,7 @@
+<%= @user.name %>, <%= @user.email %>
+<h1>
+  <%# I've created function for generating a "robotar" image
+      of every user, based on her hashed email  %>
+  <%= robotar_for @user %>
+  <%= @user.name %>
+</h1>

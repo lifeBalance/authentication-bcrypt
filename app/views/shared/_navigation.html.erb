@@ -1,0 +1,17 @@
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">
+        <%= image_tag("the-narrator.png", size: "30x30", alt: "The narrator") %>
+      </a>
+    </div>
+    <ul class="nav navbar-nav navbar-right">
+      <% if logged_in? %>
+        <li><%= link_to "Log out", logout_path, method: "delete" %></li>
+      <% else %>
+        <li><%= link_to "Log in", login_path %></li>
+        <li><%= link_to "Signup", signup_path %></li>
+      <% end %>
+    </ul>
+  </div><!-- .container-fluid -->
+</nav>
