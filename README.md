@@ -1,10 +1,10 @@
 ## Introduction to authentication in Rails 4
-First of all, there are a lot of ways to implement authentication in Rails 4 ([devise](https://github.com/plataformatec/devise), [omniauth](https://github.com/intridea/omniauth), [authlogic](https://github.com/binarylogic/authlogic)), but using the `bcrypt.gem` is the easiest way to do it.
+First of all, there are a lot of ways to implement authentication in Rails 4 ([devise], [omniauth], [authlogic]), but using the `bcrypt.gem` is one of the easiest way to do it.
 
 ## What is bcrypt
-`bcrypt` is a program for hashing passwords designed by Niels Provos and David Mazières, and presented in 1999. This function is based on the Blowfish cipher, you can read more about it [here](https://en.wikipedia.org/wiki/Bcrypt). The bcrypt function is the default password hash algorithm for BSD and other systems including some Linux distributions such as SUSE Linux.
+`bcrypt` is a program(to be more precise, is a [key derivation function]) for hashing passwords designed by Niels Provos and David Mazières, and presented in 1999. This function is based on the Blowfish cipher, you can read more about it [here]. The bcrypt function is the default password hash algorithm for BSD and other systems including some Linux distributions such as SUSE Linux.
 
-There are implementations of bcrypt for a lot of languages Python, C, C#, Perl, PHP, Java, JavaScript, and of course Ruby. We owe the ruby implementation to [Coda Hale](http://codahale.com/), and the project is maintained here at [github](https://github.com/codahale/bcrypt-ruby). Also you can check the gem at [rubygems](https://rubygems.org/gems/bcrypt/versions/3.1.10).
+There are implementations of bcrypt for a lot of languages Python, C, C#, Perl, PHP, Java, JavaScript, and of course Ruby. We owe the ruby implementation to [Coda Hale], and the project is maintained here at [github]. Also you can check the gem at [rubygems].
 
 ## Using bcrypt in Rails
 
@@ -55,9 +55,22 @@ If you want to customize your validations, it is possible to supress the default
 ### Wrapping up
 That pretty much covers it, hopefully we have shred some light over the dark magic Rails uses with `bcrypt` and `has_secure_password`. The code will make the rest of your doubts go away, so you can use this authentication system more comfortably.
 
-I've also added some style via [Bootstrap](http://getbootstrap.com/) to make it all look more spiffy. Sometimes a good graphic interface may help understanding concepts.
+I've also added some style via [Bootstrap](http://getbootstrap.com/) to make it all look more spiffy, and added some silly images. Sometimes a good story and a graphic interface may help understanding concepts.
 
 For this writeup I checked the following links:
-* [ActiveModel::SecurePassword](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword.html)
-* [ActiveModel::SecurePassword::ClassMethods](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html)
-* [ActiveModel::SecurePassword::InstanceMethodsOnActivation](http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/InstanceMethodsOnActivation.html)
+* [ActiveModel::SecurePassword]
+* [ActiveModel::SecurePassword::ClassMethods]
+* [ActiveModel::SecurePassword::InstanceMethodsOnActivation]
+
+---
+[key derivation function]:(https://en.wikipedia.org/wiki/Key_derivation_function)
+[devise]:(https://github.com/plataformatec/devise)
+[omniauth]:(https://github.com/intridea/omniauth)
+[authlogic]:(https://github.com/binarylogic/authlogic)
+[here]:(https://en.wikipedia.org/wiki/Bcrypt)
+[Coda Hale]:(http://codahale.com/)
+[github]:(https://github.com/codahale/bcrypt-ruby)
+[rubygems]:(https://rubygems.org/gems/bcrypt/versions/3.1.10)
+[ActiveModel::SecurePassword]:(http://api.rubyonrails.org/classes/ActiveModel/SecurePassword.html)
+[ActiveModel::SecurePassword::ClassMethods]:(http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/ClassMethods.html)
+[ActiveModel::SecurePassword::InstanceMethodsOnActivation]:(http://api.rubyonrails.org/classes/ActiveModel/SecurePassword/InstanceMethodsOnActivation.html)
