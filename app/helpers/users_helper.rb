@@ -4,6 +4,7 @@ module UsersHelper
   def robotar_for(user)
     robotar_id = Digest::MD5::hexdigest(user.email.downcase)
     robotar_url = "https://robohash.org/#{robotar_id}?gravatar=hashed&size=150x150"
-    image_tag(robotar_url, alt: user.name, class: "gravatar media-object")
+    image_tag(robotar_url, alt: user.name, class: "img-thumbnail media-object")
   end
+
 end

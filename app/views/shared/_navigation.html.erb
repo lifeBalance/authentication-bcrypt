@@ -10,7 +10,9 @@
       <div class="navbar-right">
         <% if logged_in? %>
           <%= link_to "Log out", logout_path, method: "delete", class: 'btn btn-warning navbar-btn' %>
-          <p class="navbar-text">Signed in as <%= current_user.name.capitalize %></p>
+          <p class="navbar-text">
+            Signed in as <%= link_to current_user.name.capitalize, current_user %>
+          </p>
         <% else %>
           <%= link_to "Log in", login_path, class: 'btn btn-success navbar-btn' %>
           <%= link_to "Signup", new_user_path, class: 'btn btn-primary navbar-btn' %>

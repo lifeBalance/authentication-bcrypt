@@ -12,14 +12,15 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       log_in(@user)
-      redirect_to root_path
+      flash[:success] = "You have been automatically logged in."
+      redirect_to @user
     else
       render 'new'
     end
   end
 
   def destroy
-    user = User.find(params[:id]).destroy
+    User.find(params[:id]).destroy
     flash[:success] = "User was successfully deleted."
     redirect_to root_path
   end

@@ -1,18 +1,20 @@
-<h1 class="text-center"><%= @user.name.capitalize %>'s profile</h1>
-  <%# I've created function for generating a "robotar" image
-      of every user, based on her hashed email  %>
 
 <div class="row">
   <div class="col-sm-6 col-sm-offset-3">
     <div class="media">
+      <h1><%= @user.name.capitalize %>'s profile</h1>
       <div class="media-left">
+        <%# In 'users_helper.rb' I've created function for generating a
+        "robotar" image of every user, based on her hashed email  %>
         <%= robotar_for @user %>
       </div>
       <div class="media-body media-bottom">
-        <h3 class="media-heading"><%= @user.name %></h3>
-        <p><%= @user.email %></p>
-        <p><%= link_to "Delete User", user_path, method: :delete,
-        data: { confirm: "Are you sure?" },class: 'btn btn-danger'%></p>
+        <p><strong>Name:</strong> <%= @user.name %></p>
+        <p><strong>Email:</strong> <%= @user.email %></p>
+        <p><%= link_to "Delete User", user_path,
+                                      method: :delete,
+                                      data: { confirm: "Are you sure?" },
+                                      class: 'btn btn-danger'%></p>
       </div>
     </div>
   </div>
